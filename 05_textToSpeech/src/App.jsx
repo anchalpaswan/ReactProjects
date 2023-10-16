@@ -17,8 +17,8 @@ function App() {
       });
   }, [refresh]);
 
-  const speechHandler = () => {
-    speech.text = quote;
+  const speechHandler = (word) => {
+    speech.text = word;
     speech.rate = parseFloat(speechRate); // Set the speech rate
     window.speechSynthesis.speak(speech);
   }
@@ -30,21 +30,24 @@ function App() {
   const quoteHandler = () => {
     setRefresh(!refresh);
   }
+  
 
   return (
     <div className='App'>
       <button onClick={quoteHandler}>Generate Quote</button>
    
       <div className="quote">
-        <h2>{quote}</h2>
+        {quote.split(" ").map((word, i) => {
+          return <span key={i} onClick={() => speechHandler(word)}>{word} </span>
+        })}
       </div>
-      <button onClick={speechHandler}>SPEAK</button>
+      <button onClick={() => speechHandler(quote)}>SPEAK</button>
       <button onClick={stopSpeechHandler}>Stop</button>
       <select onChange={(e) => setSpeechRate(+e.target.value)}>
         <option value="0.2">0.2x</option>
         <option value="0.4">0.4x</option>
         <option value="0.5">0.5x</option>
-        <option value="1">Normal</option>
+        <option value="1" >Normal</option>
       </select>
     </div>
   );
