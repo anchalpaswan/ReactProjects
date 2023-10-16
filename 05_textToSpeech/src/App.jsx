@@ -42,7 +42,7 @@ function App() {
         })}
       </div>
       <button onClick={() => speechHandler(quote)}>SPEAK</button>
-      <button onClick={stopSpeechHandler}>Stop</button>
+      <button onClick={stopSpeechHandler}>STOP</button>
       <select onChange={(e) => setSpeechRate(+e.target.value)}>
         <option value="0.2">0.2x</option>
         <option value="0.4">0.4x</option>

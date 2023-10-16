@@ -61,7 +61,6 @@ button:focus-visible {
 .quote{
   margin-top: 1rem ;
   margin-bottom: 3rem;
-  
   width: 40vw;
 }
 span{
@@ -72,7 +71,14 @@ span{
   
 }
 
-
+@media  (width <= 600px) {
+ .App{
+  margin: 1rem;
+ }
+ .quote{
+  width: 100%;
+ }
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
