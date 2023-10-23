@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.App{
+    width: 70vw;
+    height: 70vh;
+    background-color: #1212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Red{
+    background-color: red;
+    height: 50%;
+    margin-top: 0.5rem;
+    width: 100%;
+    
+}
+
+.Green{
+    background-color: green;
+    height: 50%;
+    margin-top: 0.5rem;
+    width: 100%;
+}

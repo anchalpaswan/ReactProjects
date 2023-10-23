@@ -4,14 +4,19 @@ import Game from './Game';
 
 function App() {
   const [start, setStart] = useState(false);
- return (
-  <>
-    <button onClick={()=> setStart(true)}>Start Game</button>
-    {
-      start? <Game/>: <div></div>
-    }
-  </>
-    
+  const [result, setResult] = useState('')
+  return (
+    <div className="App">
+      <button style={{visibility: start ? 'hidden' : 'visible'}} onClick={() => setStart(!start)}>Start Game</button>
+      {
+        start ? <Game setStart={setStart} setResult={setResult}/> : <div></div>
+      }
+      {
+        result? <p>{result}</p>:<p></p>
+      }
+
+    </div>
+
   )
 }
 
