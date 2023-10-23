@@ -7,7 +7,7 @@ function App() {
   const [result, setResult] = useState('')
   return (
     <div className="App">
-      <button style={{visibility: start ? 'hidden' : 'visible'}} onClick={() => setStart(!start)}>Start Game</button>
+      <button style={{display: start ? 'none' : 'block'}} onClick={() => setStart(!start)}>Start Game</button>
       {
         start ? <Game setStart={setStart} setResult={setResult}/> : <div></div>
       }
