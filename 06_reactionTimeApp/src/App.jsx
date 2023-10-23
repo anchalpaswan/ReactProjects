@@ -12,7 +12,7 @@ function App() {
         start ? <Game setStart={setStart} setResult={setResult}/> : <div></div>
       }
       {
-        result? <p>{result}</p>:<p></p>
+        result? <p>{result}</p>: <span></span>
       }
 
     </div>

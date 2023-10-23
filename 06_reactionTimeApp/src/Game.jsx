@@ -37,7 +37,7 @@ export default function Game({ setStart, setResult }) {
         <>
             {
                 redIsVisible ? <div onClick={() => showResult(true)} className="Red">
-
+                    <span>Wait for Green light!</span>
                 </div> : <div className="Green" onClick={() => showResult(false)}></div>
             }
            
